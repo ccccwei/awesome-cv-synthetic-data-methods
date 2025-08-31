@@ -66,23 +66,14 @@ Pull requests welcome! ✨
 
 > Focus on 2022–2025 papers that **use simulation to synthesize data** (often with procedural scenes, PBR rendering, or physics) and report downstream gains.
 
-- **Kubric: A Scalable Dataset Generator** (CVPR 2022). Blender + PyBullet; reproducible pipelines and rich supervision across tasks.  
-  ArXiv: <https://arxiv.org/abs/2203.03570> · PDF: <https://openaccess.thecvf.com/content/CVPR2022/papers/Greff_Kubric_A_Scalable_Dataset_Generator_CVPR_2022_paper.pdf>
-
-- **Large‑Scale Synthetic Data for Robot Perception** (2024). Isaac Sim + Replicator to generate **2.7M** images; shows real‑world benefits.  
-  ArXiv: <https://arxiv.org/html/2410.21153v1>
-
-- **ℛ‑CARLA: High‑Fidelity Sensor Simulations with Digital‑Twin Tracks** (2025). Extends CARLA for better sensor fidelity and scenario realism.  
-  ArXiv: <https://arxiv.org/html/2506.09629v1>
-
-- **PCLA: Framework for Testing Autonomous Agents in CARLA** (2025). Infrastructure and pretrained agents to systematize **scenario‑level** testing.  
-  ArXiv: <https://arxiv.org/html/2503.09385v2>
-
-- **BlenderProc / BlenderProc2** (2019–2023+). Procedural pipeline that emphasizes photorealism to **reduce the reality gap** for CV training.  
-  ArXiv: <https://arxiv.org/abs/1911.01911> · Docs: <https://dlr-rm.github.io/BlenderProc/>
-
-- **Habitat 2.0** (2021, widely used 2022–2025). Interactive rearrangement tasks; photo‑realistic indoor scenes for embodied learning with sim data.  
-  ArXiv: <https://arxiv.org/abs/2106.14405>
+| Paper Title | Year | Conference/Journal | Main Contribution | Tech Stack | Links |
+|-------------|------|-------------------|------------------|------------|-------|
+| **Kubric: A Scalable Dataset Generator** | 2022 | CVPR | Blender + PyBullet; reproducible pipelines and rich supervision across tasks | Blender, PyBullet | [ArXiv](https://arxiv.org/abs/2203.03570) · [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Greff_Kubric_A_Scalable_Dataset_Generator_CVPR_2022_paper.pdf) |
+| **Large‑Scale Synthetic Data for Robot Perception** | 2024 | - | Isaac Sim + Replicator to generate **2.7M** images; shows real‑world benefits | Isaac Sim, Replicator | [ArXiv](https://arxiv.org/html/2410.21153v1) |
+| **ℛ‑CARLA: High‑Fidelity Sensor Simulations with Digital‑Twin Tracks** | 2025 | - | Extends CARLA for better sensor fidelity and scenario realism | CARLA Extension | [ArXiv](https://arxiv.org/html/2506.09629v1) |
+| **PCLA: Framework for Testing Autonomous Agents in CARLA** | 2025 | - | Infrastructure and pretrained agents to systematize **scenario‑level** testing | CARLA | [ArXiv](https://arxiv.org/html/2503.09385v2) |
+| **BlenderProc / BlenderProc2** | 2019–2023+ | - | Procedural pipeline that emphasizes photorealism to **reduce the reality gap** for CV training | Blender | [ArXiv](https://arxiv.org/abs/1911.01911) · [Docs](https://dlr-rm.github.io/BlenderProc/) |
+| **Habitat 2.0** | 2021 | - | Interactive rearrangement tasks; photo‑realistic indoor scenes for embodied learning with sim data | Habitat | [ArXiv](https://arxiv.org/abs/2106.14405) |
 
 > **Tip:** When surveying papers, note *renderer/engine*, *label types* (2D/3D boxes, depth, normals, flow, pose), *randomization knobs*, and *real‑world validation* (zero‑shot vs fine‑tune).
 
@@ -90,14 +81,11 @@ Pull requests welcome! ✨
 
 ## Survey / Overview Papers
 
-- **A Survey of Synthetic Data Augmentation Methods in Computer Vision** (2024). Covers 3D graphics‑based synthesis, neural rendering, GAN/VAEs, etc.  
-  ArXiv: <https://arxiv.org/abs/2403.10075> · PDF: <https://arxiv.org/pdf/2403.10075>
-
-- **A Survey of Data Synthesis Approaches** (2024). Goals: diversity, balance, domain shift, edge cases; broad methods taxonomy.  
-  ArXiv: <https://arxiv.org/html/2407.03672v1>
-
-- **Machine Learning for Synthetic Data Generation: A Review** (2023). Comprehensive review (multi‑domain).  
-  ArXiv: <https://arxiv.org/abs/2302.04062>
+| Paper Title | Year | Main Content | Links |
+|-------------|------|--------------|-------|
+| **A Survey of Synthetic Data Augmentation Methods in Computer Vision** | 2024 | Covers 3D graphics‑based synthesis, neural rendering, GAN/VAEs, etc. | [ArXiv](https://arxiv.org/abs/2403.10075) · [PDF](https://arxiv.org/pdf/2403.10075) |
+| **A Survey of Data Synthesis Approaches** | 2024 | Goals: diversity, balance, domain shift, edge cases; broad methods taxonomy | [ArXiv](https://arxiv.org/html/2407.03672v1) |
+| **Machine Learning for Synthetic Data Generation: A Review** | 2023 | Comprehensive review (multi‑domain) | [ArXiv](https://arxiv.org/abs/2302.04062) |
 
 ---
 

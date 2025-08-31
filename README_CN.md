@@ -66,23 +66,14 @@
 
 > 重点关注2022–2025年**使用仿真合成数据**的论文（通常使用程序化场景、PBR渲染或物理），并报告下游收益。
 
-- **Kubric: 可扩展数据集生成器** (CVPR 2022)。Blender + PyBullet；可重现流水线和跨任务的丰富监督。  
-  ArXiv：<https://arxiv.org/abs/2203.03570> · PDF：<https://openaccess.thecvf.com/content/CVPR2022/papers/Greff_Kubric_A_Scalable_Dataset_Generator_CVPR_2022_paper.pdf>
-
-- **机器人感知的大规模合成数据** (2024)。Isaac Sim + Replicator生成**270万**张图像；显示真实世界收益。  
-  ArXiv：<https://arxiv.org/html/2410.21153v1>
-
-- **ℛ‑CARLA：具有数字孪生轨道的高保真传感器仿真** (2025)。扩展CARLA以获得更好的传感器保真度和场景真实感。  
-  ArXiv：<https://arxiv.org/html/2506.09629v1>
-
-- **PCLA：CARLA中自主代理测试框架** (2025)。基础设施和预训练代理，用于系统化**场景级**测试。  
-  ArXiv：<https://arxiv.org/html/2503.09385v2>
-
-- **BlenderProc / BlenderProc2** (2019–2023+)。强调照片真实感的程序化流水线，以**减少CV训练的现实差距**。  
-  ArXiv：<https://arxiv.org/abs/1911.01911> · 文档：<https://dlr-rm.github.io/BlenderProc/>
-
-- **Habitat 2.0** (2021，2022–2025年广泛使用)。交互式重排任务；用于具身学习的照片级真实感室内场景，使用仿真数据。  
-  ArXiv：<https://arxiv.org/abs/2106.14405>
+| 论文名称 | 年份 | 会议/期刊 | 主要贡献 | 技术栈 | 链接 |
+|---------|------|-----------|----------|--------|------|
+| **Kubric: 可扩展数据集生成器** | 2022 | CVPR | Blender + PyBullet；可重现流水线和跨任务的丰富监督 | Blender, PyBullet | [ArXiv](https://arxiv.org/abs/2203.03570) · [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Greff_Kubric_A_Scalable_Dataset_Generator_CVPR_2022_paper.pdf) |
+| **机器人感知的大规模合成数据** | 2024 | - | Isaac Sim + Replicator生成**270万**张图像；显示真实世界收益 | Isaac Sim, Replicator | [ArXiv](https://arxiv.org/html/2410.21153v1) |
+| **ℛ‑CARLA：具有数字孪生轨道的高保真传感器仿真** | 2025 | - | 扩展CARLA以获得更好的传感器保真度和场景真实感 | CARLA扩展 | [ArXiv](https://arxiv.org/html/2506.09629v1) |
+| **PCLA：CARLA中自主代理测试框架** | 2025 | - | 基础设施和预训练代理，用于系统化**场景级**测试 | CARLA | [ArXiv](https://arxiv.org/html/2503.09385v2) |
+| **BlenderProc / BlenderProc2** | 2019–2023+ | - | 强调照片真实感的程序化流水线，以**减少CV训练的现实差距** | Blender | [ArXiv](https://arxiv.org/abs/1911.01911) · [文档](https://dlr-rm.github.io/BlenderProc/) |
+| **Habitat 2.0** | 2021 | - | 交互式重排任务；用于具身学习的照片级真实感室内场景，使用仿真数据 | Habitat | [ArXiv](https://arxiv.org/abs/2106.14405) |
 
 > **提示：** 在调研论文时，注意*渲染器/引擎*、*标注类型*（2D/3D边界框、深度、法线、光流、姿态）、*随机化旋钮*和*真实世界验证*（零样本 vs 微调）。
 
@@ -90,14 +81,11 @@
 
 ## 综述/概述论文
 
-- **计算机视觉中合成数据增强方法综述** (2024)。涵盖基于3D图形的合成、神经渲染、GAN/VAE等。  
-  ArXiv：<https://arxiv.org/abs/2403.10075> · PDF：<https://arxiv.org/pdf/2403.10075>
-
-- **数据合成方法综述** (2024)。目标：多样性、平衡、领域偏移、边缘情况；广泛方法分类。  
-  ArXiv：<https://arxiv.org/html/2407.03672v1>
-
-- **合成数据生成的机器学习：综述** (2023)。全面综述（多领域）。  
-  ArXiv：<https://arxiv.org/abs/2302.04062>
+| 论文名称 | 年份 | 主要内容 | 链接 |
+|---------|------|----------|------|
+| **计算机视觉中合成数据增强方法综述** | 2024 | 涵盖基于3D图形的合成、神经渲染、GAN/VAE等 | [ArXiv](https://arxiv.org/abs/2403.10075) · [PDF](https://arxiv.org/pdf/2403.10075) |
+| **数据合成方法综述** | 2024 | 目标：多样性、平衡、领域偏移、边缘情况；广泛方法分类 | [ArXiv](https://arxiv.org/html/2407.03672v1) |
+| **合成数据生成的机器学习：综述** | 2023 | 全面综述（多领域） | [ArXiv](https://arxiv.org/abs/2302.04062) |
 
 ---
 
