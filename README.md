@@ -19,10 +19,12 @@ Pull requests welcome! Star to track real-time updates ✨
   - [Robotics/Embodied AI Suites](#roboticsembodied-ai-suites)
   - [Domain-Specific Simulation Platforms](#domain-specific-simulation-platforms)
   - [Annotation & Pipeline Tools](#annotation--pipeline-tools)
+- [Simulation-based Papers](#simulation-based-papers)
 - [Model-based Generation](#model-based-generation)
   - [Image-level Generation & Editing](#image-level-generation--editing)
   - [Video/Temporal Consistency](#videotemporal-consistency)
   - [3D Generation & Neural Rendering](#3d-generation--neural-rendering)
+- [Model-based Generation Papers](#model-based-generation-papers)
 - [Recent Papers (2022–2025, Focus)](#recent-papers-20222025-focus)
 - [Survey/Overview Papers](#surveyoverview-papers)
 - [Classic Synthetic Datasets & Benchmarks (Optional)](#classic-synthetic-datasets--benchmarks-optional)
@@ -79,6 +81,22 @@ Pull requests welcome! Star to track real-time updates ✨
 - **NDDS (Unity Plugin)** — Semi-automatic annotation (pose/segmentation/depth). <https://github.com/NVIDIA/Dataset_Synthesizer>  
 - **Blender-BOP / BOP Format Export** — Common export for 6D pose tasks. <https://bop.felk.cvut.cz/>  
 
+### Simulation-based Papers
+
+> Focus on **simulation-based** synthetic data generation, emphasizing Sim→Real transfer effectiveness.
+
+| Paper Title | Year | Conference/Journal | Main Contribution | Tech Stack | Links |
+|-------------|------|-------------------|------------------|------------|-------|
+| **Kubric: A Scalable Dataset Generator** | 2022 | CVPR | Blender+PyBullet, cross-task high-quality annotations | Blender, PyBullet | [ArXiv](https://arxiv.org/abs/2203.03570) · [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Greff_Kubric_A_Scalable_Dataset_Generator_CVPR_2022_paper.pdf) |
+| **Large-Scale Synthetic Data for Robot Perception** | 2024 | — | Isaac Sim + Replicator generating **2.7 million** images, validating real-world benefits | Isaac, Replicator | [ArXiv](https://arxiv.org/html/2410.21153v1) |
+| **ORBIT-Surgical** | 2023–2024 | — | Surgical robotics synthetic tasks/evaluation, simulation to reality | Isaac, Surgery | [GitHub](https://github.com/NVIDIA-Omniverse/orbit-surgical) |
+| **ℛ-CARLA: Digital Twins & High-Fidelity Sensors** | 2025 | — | Higher fidelity autonomous driving simulation and sensor models | CARLA Extension | [ArXiv](https://arxiv.org/html/2506.09629v1) |
+| **PCLA: CARLA Agent Testing Framework** | 2025 | — | Pre-trained agents and systematic scenario-level testing | CARLA | [ArXiv](https://arxiv.org/html/2503.09385v2) |
+| **BlenderProc2** | 2023+ | — | CV-oriented reproducible experiments and reality gap reduction | Blender | [Docs](https://dlr-rm.github.io/BlenderProc/) |
+| **Habitat 2.0** | 2021 | — | Rearrangement tasks, embodied learning simulation data to real-world validation | Habitat | [ArXiv](https://arxiv.org/abs/2106.14405) |
+
+> **Simulation-based Reading Points**: Focus on **randomization knobs** (lighting/materials/pose/occlusion/background), **annotation types**, **real-world validation protocols** (zero-shot/fine-tuning) and **deployment costs** (asset preparation/compute/render throughput).
+
 ---
 
 ## Model-based Generation
@@ -106,11 +124,29 @@ Pull requests welcome! Star to track real-time updates ✨
   <https://github.com/SUDO-AI-3D/zero123plus> · <https://arxiv.org/abs/2307.00686> · <https://github.com/VAST-AI-Research/TripoSR> · <https://github.com/xxlong0/Wonder3D> · <https://github.com/openai/shap-e>  
 - **GET3D / Magic3D** — High-quality textured meshes/text-to-3D. <https://github.com/nv-tlabs/GET3D> · <https://github.com/daveredrum/Magic3D>
 
+### Model-based Generation Papers
+
+> Focus on **model-based** synthetic data generation, emphasizing generation quality and downstream task benefits.
+
+| Paper Title | Year | Conference/Journal | Main Contribution | Tech Stack | Links |
+|-------------|------|-------------------|------------------|------------|-------|
+| **InstaGen: Synthetic Data Boosting Detection** | 2024 | CVPR | Using diffusion to generate diverse training samples, significantly improving detection | Diffusion, Detection | [ArXiv](https://arxiv.org/abs/2402.09900) |
+| **Stable Diffusion** | 2022 | — | Diffusion model text-to-image generation, open ecosystem | Diffusion | [ArXiv](https://arxiv.org/abs/2112.10752) |
+| **ControlNet** | 2023 | — | Conditionally controllable image generation, supports edge/pose/depth guidance | Diffusion | [ArXiv](https://arxiv.org/abs/2302.05543) |
+| **IP-Adapter** | 2023 | — | Reference image style transfer, no fine-tuning required | Diffusion | [ArXiv](https://arxiv.org/abs/2308.01621) |
+| **3D Gaussian Splatting** | 2023 | SIGGRAPH | Real-time neural rendering, high-quality 3D reconstruction | Neural Rendering | [ArXiv](https://arxiv.org/abs/2308.16579) |
+| **Zero123++** | 2023 | — | Single-view to 3D generation, zero-shot 3D understanding | 3D Generation | [ArXiv](https://arxiv.org/abs/2310.15110) |
+| **GET3D** | 2022 | NeurIPS | High-quality textured mesh generation | 3D Generation | [ArXiv](https://arxiv.org/abs/2209.11163) |
+
+> **Model-based Reading Points**: Focus on **generation quality**, **control precision**, **diversity**, **downstream task adaptability** and **computational efficiency**.
+
+
+
 ---
 
 ## Recent Papers (2022–2025, Focus)
 
-> Focus on papers that use **simulation-based** or **synthetic→real benefits** with quantitative evaluation (zero-shot/few-shot/fine-tuning).
+> Focus on papers that use **simulation-based** or **model-based generation** with **synthetic→real benefits** and quantitative evaluation (zero-shot/few-shot/fine-tuning).
 
 | Paper Title | Year | Conference/Journal | Main Contribution | Tech Stack | Links |
 |-------------|------|-------------------|------------------|------------|-------|

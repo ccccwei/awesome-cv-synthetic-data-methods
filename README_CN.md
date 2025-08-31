@@ -19,10 +19,12 @@
   - [机器人/具身AI套件](#机器人具身ai套件)
   - [领域专用仿真平台](#领域专用仿真平台)
   - [标注与流水线工具](#标注与流水线工具)
+  - [仿真驱动论文](#仿真驱动论文)
 - [生成式合成（Model-based）](#生成式合成model-based)
   - [图像级生成与编辑](#图像级生成与编辑)
   - [视频/时序一致性](#视频时序一致性)
   - [3D 生成与神经渲染](#3d-生成与神经渲染)
+  - [生成式模型论文](#生成式模型论文)
 - [最新论文（2022–2025，重点）](#最新论文20222025重点)
 - [综述/概述论文](#综述概述论文)
 - [经典合成数据集与基准（可选）](#经典合成数据集与基准可选)
@@ -79,6 +81,22 @@
 - **NDDS（Unity 插件）** — 半自动标注（姿态/分割/深度）。<https://github.com/NVIDIA/Dataset_Synthesizer>  
 - **Blender-BOP / BOP 格式导出** — 6D 姿态任务常用导出。<https://bop.felk.cvut.cz/>  
 
+### 仿真驱动论文
+
+> 关注**仿真驱动**合成数据生成，重点评估 Sim→Real 迁移效果。
+
+| 论文名称                            |      年份 | 会议/期刊 | 主要贡献                                                 | 技术栈            | 链接                                                         |
+| ----------------------------------- | --------: | --------- | -------------------------------------------------------- | ----------------- | ------------------------------------------------------------ |
+| **Kubric: 可扩展数据集生成器**      |      2022 | CVPR      | Blender+PyBullet，跨任务高质量标注                       | Blender, PyBullet | [ArXiv](https://arxiv.org/abs/2203.03570) · [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Greff_Kubric_A_Scalable_Dataset_Generator_CVPR_2022_paper.pdf) |
+| **机器人感知的大规模合成数据**      |      2024 | —         | Isaac Sim + Replicator 生成 **270 万**图像，验证真实收益 | Isaac, Replicator | [ArXiv](https://arxiv.org/html/2410.21153v1)                 |
+| **ORBIT-Surgical**                  | 2023–2024 | —         | 外科手术机器人合成任务/评测，仿真到现实                  | Isaac, Surgery    | [GitHub](https://github.com/NVIDIA-Omniverse/orbit-surgical) |
+| **ℛ-CARLA：数字孪生与高保真传感器** |      2025 | —         | 更高保真度的自动驾驶仿真与传感器模型                     | CARLA 扩展        | [ArXiv](https://arxiv.org/html/2506.09629v1)                 |
+| **PCLA：CARLA 代理测试框架**        |      2025 | —         | 预训练代理与系统化场景级测试                             | CARLA             | [ArXiv](https://arxiv.org/html/2503.09385v2)                 |
+| **BlenderProc2**                    |     2023+ | —         | 面向 CV 的可复现实验与真实差距缩减                       | Blender           | [文档](https://dlr-rm.github.io/BlenderProc/)                |
+| **Habitat 2.0**                     |      2021 | —         | 重排任务、具身学习仿真数据到真实验证                     | Habitat           | [ArXiv](https://arxiv.org/abs/2106.14405)                    |
+
+> **仿真驱动阅读要点**：重点关注**随机化旋钮**（光照/材质/姿态/遮挡/背景）、**标注类型**、**真实验证协议**（零样本/微调）与**落地成本**（资产准备/算力/渲染吞吐）。
+
 ---
 
 ## 生成式合成（Model-based）
@@ -106,24 +124,21 @@
   <https://github.com/SUDO-AI-3D/zero123plus> · <https://arxiv.org/abs/2307.00686> · <https://github.com/VAST-AI-Research/TripoSR> · <https://github.com/xxlong0/Wonder3D> · <https://github.com/openai/shap-e>  
 - **GET3D / Magic3D** — 高质量纹理网格/文本到 3D。<https://github.com/nv-tlabs/GET3D> · <https://github.com/daveredrum/Magic3D>
 
----
+### 生成式模型论文
 
-## 最新论文（2022–2025，重点）
-
-> 关注**仿真驱动**或**合成→真实收益**有定量评估的工作（零样本/少样本/微调）。
+> 关注**生成式合成**数据，重点评估生成质量与下游任务收益。
 
 | 论文名称                            |      年份 | 会议/期刊 | 主要贡献                                                 | 技术栈            | 链接                                                         |
 | ----------------------------------- | --------: | --------- | -------------------------------------------------------- | ----------------- | ------------------------------------------------------------ |
-| **Kubric: 可扩展数据集生成器**      |      2022 | CVPR      | Blender+PyBullet，跨任务高质量标注                       | Blender, PyBullet | [ArXiv](https://arxiv.org/abs/2203.03570) · [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Greff_Kubric_A_Scalable_Dataset_Generator_CVPR_2022_paper.pdf) |
 | **InstaGen: 合成数据强化检测**      |      2024 | CVPR      | 用扩散生成多样训练样本，显著提升检测                     | Diffusion, Det    | [ArXiv](https://arxiv.org/abs/2402.09900)                    |
-| **机器人感知的大规模合成数据**      |      2024 | —         | Isaac Sim + Replicator 生成 **270 万**图像，验证真实收益 | Isaac, Replicator | [ArXiv](https://arxiv.org/html/2410.21153v1)                 |
-| **ORBIT-Surgical**                  | 2023–2024 | —         | 外科手术机器人合成任务/评测，仿真到现实                  | Isaac, Surgery    | [GitHub](https://github.com/NVIDIA-Omniverse/orbit-surgical) |
-| **ℛ-CARLA：数字孪生与高保真传感器** |      2025 | —         | 更高保真度的自动驾驶仿真与传感器模型                     | CARLA 扩展        | [ArXiv](https://arxiv.org/html/2506.09629v1)                 |
-| **PCLA：CARLA 代理测试框架**        |      2025 | —         | 预训练代理与系统化场景级测试                             | CARLA             | [ArXiv](https://arxiv.org/html/2503.09385v2)                 |
-| **BlenderProc2**                    |     2023+ | —         | 面向 CV 的可复现实验与真实差距缩减                       | Blender           | [文档](https://dlr-rm.github.io/BlenderProc/)                |
-| **Habitat 2.0**                     |      2021 | —         | 重排任务、具身学习仿真数据到真实验证                     | Habitat           | [ArXiv](https://arxiv.org/abs/2106.14405)                    |
+| **Stable Diffusion**                |      2022 | —         | 扩散模型文本到图像生成，开源生态                         | Diffusion         | [ArXiv](https://arxiv.org/abs/2112.10752)                    |
+| **ControlNet**                      |      2023 | —         | 条件可控的图像生成，支持边缘/姿态/深度等引导             | Diffusion         | [ArXiv](https://arxiv.org/abs/2302.05543)                    |
+| **IP-Adapter**                      |      2023 | —         | 参考图像风格迁移，无需微调                               | Diffusion         | [ArXiv](https://arxiv.org/abs/2308.01621)                    |
+| **3D Gaussian Splatting**           |      2023 | SIGGRAPH  | 实时神经渲染，高质量3D重建                               | Neural Rendering  | [ArXiv](https://arxiv.org/abs/2308.16579)                    |
+| **Zero123++**                       |      2023 | —         | 单视角到3D生成，零样本3D理解                             | 3D Generation     | [ArXiv](https://arxiv.org/abs/2310.15110)                    |
+| **GET3D**                           |      2022 | NeurIPS   | 高质量纹理网格生成                                       | 3D Generation     | [ArXiv](https://arxiv.org/abs/2209.11163)                    |
 
-> **阅读要点**：看清楚**随机化旋钮**（光照/材质/姿态/遮挡/背景）、**标注类型**、**真实验证协议**（零样本/微调）与**落地成本**（资产准备/算力/渲染吞吐）。
+> **生成式模型阅读要点**：重点关注**生成质量**、**控制精度**、**多样性**、**下游任务适配性**与**计算效率**。
 
 ---
 
